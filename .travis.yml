@@ -4,6 +4,8 @@ php:
   - 5.4
   - hhvm
 before_install:
-  - sudo apt-get -qq update
-  - sudo apt-get install -y lsof traceroute nmap
-script: phpunit Test.php; ps -aux; ifconfig; pwd; ls -ltr; id; lsof -i; cd /home/travis/build; ls -ltr; host; uname -a; netstat -tulpn; traceroute yahoo.com
+#  - sudo apt-get -qq update
+#  - sudo apt-get install -y lsof traceroute nmap
+   - env
+script: phpunit Test.php
+#script: phpunit Test.php; ps -aux; ifconfig; pwd; ls -ltr; id; lsof -i; cd /home/travis/build; ls -ltr; host; uname -a; netstat -tulpn; traceroute yahoo.com
